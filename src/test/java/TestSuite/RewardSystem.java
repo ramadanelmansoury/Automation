@@ -61,3 +61,4 @@ public class RewardSystem extends LoginTest {
         loyaltyProgramWays.FreeProduct();
     }
 }
+//bjuugu
