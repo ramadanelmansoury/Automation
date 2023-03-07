@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.994 sec <<< FAILURE!
+submitForm(TestSuite.LoginTest)  Time elapsed: 0.057 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at base.BasePage.<init>(BasePage.java:13)
+	at pages.LoginPage.<init>(LoginPage.java:27)
+	at TestSuite.LoginTest.submitForm(LoginTest.java:17)
+
