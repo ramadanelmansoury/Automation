@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 
 
 public class RewardSystemPage extends BasePage {
@@ -95,6 +97,47 @@ public class RewardSystemPage extends BasePage {
     public WebElement pointsFreeProduct;
     @FindBy(css = "input[id='expiryPeriod']")
     public WebElement daysFreeProduct;
+    @FindBy(css = "div[class*='input-container']")
+    public WebElement freeProudct;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveBtnFreeProduct;
+    @FindBy(xpath = "//p[contains(@style, '32px;')]")
+    public WebElement spaceFreeProduct;
+
+    @FindBy(xpath = "/html/body/div[4]/div[3]/div/div[2]/form/div[2]/div[2]/span/span[1]/input")
+    public WebElement specificCategories;
+    @FindBy(xpath = "//div[contains(@class, 'css-ackcql')]")
+    public WebElement categoreisDropdown;
+    @FindBy(xpath = "//p[contains(@style, '32px;')]")
+    public WebElement spaceBtn;
+    @FindBy(xpath = "/html/body/div[4]/div[3]/div/div[2]/form/div[2]/div[3]/span/span[1]/input")
+    public WebElement proudctSpecific;
+    @FindBy(xpath = "//div[contains(@class, 'css-ackcql')]")
+    public WebElement proudctNameDropdown;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/p[2]")
+    public WebElement fixedAmountTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/p[3]")
+    public WebElement percentageDiscountTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/p[4]")
+    public WebElement freeShippingTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[3]/div/p[5]")
+    public WebElement freeProudctTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[4]/div/div[1]/div[1]/span/span[1]/span/input")
+    public WebElement inputCheckedDiscountFixedAmount;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[4]/div/div[1]/div[1]/span/span[1]/span/input")
+    public WebElement inputCheckedPercntageDiscount;
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[4]/div/div[1]/div[1]/span/span[1]/span/input")
+    public WebElement inputCheckedFreeShipping;
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[4]/div/div[1]/div[1]/span/span[1]/span/input")
+    public WebElement inputCheckedFreeProduct;
+
+
     public void fillInRewardFormWithoutInputs() throws InterruptedException {
         fixedAmountDiscountBtn.click();
         saveRewardBtn.click();
@@ -127,7 +170,34 @@ public class RewardSystemPage extends BasePage {
         inputPointAmount.sendKeys("100");
         inputDiscountAmount.sendKeys("100");
         SpecificDiscountedProductsCheckbox.click();
+        specificCategories.click();
+        categoreisDropdown.click();
         Thread.sleep(5000);
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(200);
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+        Thread.sleep(5000);
+        spaceBtn.click();
+        Thread.sleep(5000);
+        proudctSpecific.click();
+        Thread.sleep(5000);
+        proudctNameDropdown.click();
+        Thread.sleep(5000);
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(200);
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+        Thread.sleep(5000);
+        spaceBtn.click();
         saveRewardBtn.click();
         Thread.sleep(5000);
     }
@@ -208,8 +278,40 @@ public class RewardSystemPage extends BasePage {
         saveFreeProductBtn.click();
         Thread.sleep(5000);
         daysFreeProduct.sendKeys("64");
+        freeProudct.click();
+        Thread.sleep(5000);
 
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(200);
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
 
+        Thread.sleep(5000);
+        spaceFreeProduct.click();
+        saveBtnFreeProduct.click();
+        Thread.sleep(5000);
+    }
+
+    public void checkTheTabs() throws InterruptedException {
+        fixedAmountTab.click();
+        Thread.sleep(5000);
+        inputCheckedDiscountFixedAmount.click();
+        Thread.sleep(5000);
+        percentageDiscountTab.click();
+        Thread.sleep(5000);
+        inputCheckedPercntageDiscount.click();
+        Thread.sleep(5000);
+        freeShippingTab.click();
+        Thread.sleep(5000);
+        inputCheckedFreeShipping.click();
+        Thread.sleep(5000);
+        freeProudctTab.click();
+        Thread.sleep(5000);
+        inputCheckedFreeProduct.click();
 
 
 

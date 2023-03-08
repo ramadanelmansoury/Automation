@@ -60,5 +60,9 @@ public class RewardSystem extends LoginTest {
     public void addFreeProduct() throws InterruptedException {
         loyaltyProgramWays.FreeProduct();
     }
+
+    @Test (priority = 14)
+    public void checkTabsClickAbility() throws InterruptedException {
+        loyaltyProgramWays.checkTheTabs();
+    }
 }
-//bjuugu
