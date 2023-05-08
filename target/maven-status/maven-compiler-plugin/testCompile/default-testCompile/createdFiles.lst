@@ -1,6 +1,0 @@
-base\BasePage.class
-base\BaseTest.class
-TestSuite\loyaltyProgramWays.class
-pages\LoginPage.class
-pages\LoyaltyProgramPage.class
-TestSuite\LoginTest.class

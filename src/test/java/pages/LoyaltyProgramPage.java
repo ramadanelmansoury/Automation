@@ -1,9 +1,12 @@
 package pages;
+
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -12,17 +15,17 @@ public class LoyaltyProgramPage extends BasePage {
     {
         super(driver);
     }
-
     @FindBy( xpath ="//*[@data-testid='programs']")
     public WebElement loyaltyProgramBtnMenu;
+    @Step
     public void clickLoyaltySideMenu()
     {
         loyaltyProgramBtnMenu.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
     @FindBy(xpath = "//*[@data-testid='earningMethods']")
     public WebElement earningWaysMenBtn;
+    @Step
     public void clickEarningWaysMenBtn()
 
     {
@@ -32,7 +35,7 @@ public class LoyaltyProgramPage extends BasePage {
 
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[1]/div[2]")
     public WebElement divPaperElevation;
-
+    @Step
     public void CompleteِِAnOrder()
     {
         divPaperElevation.click();
@@ -40,7 +43,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//*[@id='points']")
     public WebElement inputPoints;
-
+    @Step
     public void inputPoints(String points)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -50,11 +53,13 @@ public class LoyaltyProgramPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='MuiButton-label']")
     public WebElement span;
+    @Step
     public void clickSpan()
     {
         span.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+    @Step
     public void CompleteِِAnOrderWithOutOption()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -66,6 +71,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/form/div/div[1]/div[2]/span/span[1]/input")
     public WebElement checkbox;
+    @Step
     public void inputPointsWithOption( )
     {
         threadSleep(500000);
@@ -84,6 +90,7 @@ public class LoyaltyProgramPage extends BasePage {
 
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[1]/div[1]/span/span[1]/span/input")
     public WebElement CompleteAnOrderActive;
+    @Step
     public <wait> void CompleteAnOrderActive() throws InterruptedException {
         CompleteAnOrderActive.click();
         Thread.sleep(5000);
@@ -95,6 +102,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[2]/div[2]")
     public WebElement SignInStore;
+    @Step
     public void SignInStoreEarningMethods()
     {
         int TimeOut = 100;
@@ -104,8 +112,9 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//*[@id='points']")
     public WebElement AddPoints;
-    @FindBy(xpath = "//button[@rouneded='0']")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/form/div/div[2]/span/button")
     public WebElement SaveRegisterStoreBtn;
+    @Step
     public void SignInStoreEarningMethodsWithoutPoints() throws InterruptedException {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
         AddPoints.sendKeys(selectAll);
@@ -114,6 +123,7 @@ public class LoyaltyProgramPage extends BasePage {
         SaveRegisterStoreBtn.click();
         Thread.sleep(5000);
     }
+    @Step
     public void AddPointsInSignInStore(String points) throws InterruptedException {
        String selectAll = Keys.chord(Keys.CONTROL, "a");
        AddPoints.sendKeys(selectAll);
@@ -124,6 +134,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[2]/div[1]/span/span[1]/span/input")
     public WebElement checkedRegisterStoreBtn;
+    @Step
     public void checkedRegisterStoreBtn() throws InterruptedException {
         checkedRegisterStoreBtn.click();
         Thread.sleep(5000);
@@ -132,6 +143,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[3]/div[3]")
     public WebElement CelebrateABirthday;
+    @Step
     public void CelebrateABirthdayEarningMethods() throws InterruptedException {
         int TimeOut = 100;
         driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
@@ -140,6 +152,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//*[@id='points']")
     public WebElement addPointsCelebrateABirthday;
+    @Step
     public void addPointsCelebrateABirthday(String points)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -148,12 +161,14 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//span[@class='MuiButton-label']")
     public WebElement saveBirthDayBtn;
+    @Step
     public void saveBirthDayBtn()
     {
         saveBirthDayBtn.click();
     }
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[3]/div[2]/span/span[1]/span/input")
     public WebElement activeDeactivateCelebrateABirthday;
+    @Step
     public void activeDeactiveCelebrateABirthday() throws InterruptedException {
         activeDeactivateCelebrateABirthday.click();
         Thread.sleep(5000);
@@ -161,6 +176,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[4]/div[3]/h3")
     public WebElement TwitterFollow;
+    @Step
     public void TwitterFollowEarningMethods() throws InterruptedException {
         int TimeOut = 1000;
         driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
@@ -169,6 +185,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//*[@id='wayUserName']")
     public WebElement addTwitterUserName;
+    @Step
     public void addTwitterUserName(String userName)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -184,6 +201,7 @@ public class LoyaltyProgramPage extends BasePage {
     public WebElement saveTwitterFollowBtn;
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[4]/div[2]/span/span[1]/span/input")
     public WebElement activeTwitterBtn;
+    @Step
     public void pointsOfTwitterFollow()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -192,6 +210,7 @@ public class LoyaltyProgramPage extends BasePage {
         saveTwitterFollowBtn.click();
 
     }
+    @Step
     public void AddTwitterUserNameAndPoints(String userName, String points)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -201,6 +220,7 @@ public class LoyaltyProgramPage extends BasePage {
         pointsOfTwitterFollow.sendKeys(points);
         saveTwitterFollowBtn.click();
     }
+    @Step
     public void ActiveAndDeActiveTwitterFollowEarningMethods() throws InterruptedException {
 
         LoginPage LoyaltyProgram = new LoginPage(driver);
@@ -211,6 +231,7 @@ public class LoyaltyProgramPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(@style, '0px;')][.//*[@id='instagram']]")
     public WebElement instagramBtn;
+    @Step
     public void instagramBtn() throws InterruptedException {
         int TimeOut = 1000;
         driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
@@ -221,6 +242,7 @@ public class LoyaltyProgramPage extends BasePage {
     public WebElement InstagramEmail;
     @FindBy(xpath = "//span[@class='MuiButton-label']")
     public WebElement saveInstagramBtn;
+    @Step
     public void InstagramEmail() throws InterruptedException {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
         InstagramEmail.sendKeys(selectAll);
@@ -230,7 +252,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "//*[@id='points']")
     public WebElement instagramPoints;
-
+    @Step
     public void SaveWithInstagramPoints()
     {
         InstagramEmail.sendKeys("Test Instagram");
@@ -239,6 +261,7 @@ public class LoyaltyProgramPage extends BasePage {
         instagramPoints.sendKeys(Keys.DELETE);
         saveInstagramBtn.click();
     }
+    @Step
     public void AddInstagramEmailAndPoints(String email, String points)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -252,6 +275,7 @@ public class LoyaltyProgramPage extends BasePage {
     }
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/section/div[2]/div[2]/div/div[5]/div[2]/span/span[1]/span/input")
     public WebElement instagramCheckBox;
+    @Step
     public void instagramCheckBox() throws InterruptedException {
         instagramCheckBox.click();
         Thread.sleep(5000);
@@ -267,20 +291,18 @@ public class LoyaltyProgramPage extends BasePage {
     public WebElement tiktokPoints;
     @FindBy(xpath = "//span[@class='MuiButton-label']")
     public WebElement tiktokSaveBtn;
-
+    @Step
     public void saveWithoutTiktokEmail() throws  InterruptedException
     {
-
         int TimeOut = 1000;
         driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
-
         tiktokBtn.click();
         String selectAll = Keys.chord(Keys.CONTROL, "a");
         tiktokUserName.sendKeys(selectAll);
         tiktokUserName.sendKeys(Keys.DELETE);
         tiktokSaveBtn.click();
     }
-
+    @Step
     public void saveWithoutTiktokPoints() throws  InterruptedException
     {
 
@@ -289,6 +311,7 @@ public class LoyaltyProgramPage extends BasePage {
         tiktokPoints.sendKeys(Keys.DELETE);
         tiktokSaveBtn.click();
     }
+    @Step
     public void saveWithoutTiktokEmailAndPoints() throws  InterruptedException
     {
 
@@ -299,6 +322,7 @@ public class LoyaltyProgramPage extends BasePage {
         tiktokPoints.sendKeys(Keys.DELETE);
         tiktokSaveBtn.click();
     }
+    @Step
     public void addTiktokEmailAndPoints(String email, String points)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -310,6 +334,7 @@ public class LoyaltyProgramPage extends BasePage {
         tiktokPoints.sendKeys(points);
         tiktokSaveBtn.click();
     }
+    @Step
     public void tiktokCheckBox() throws InterruptedException {
         tiktokCheckBox.click();
         Thread.sleep(5000);
@@ -321,7 +346,7 @@ public class LoyaltyProgramPage extends BasePage {
     public WebElement daysForPointExpiry;
     @FindBy(xpath = "//span[@class='MuiButton-label']")
     public WebElement saveDaysBtn;
-
+    @Step
     public void saveWithoutDaysForPointExpiry()
     {
         PointsExpiryBtn.click();
@@ -330,7 +355,7 @@ public class LoyaltyProgramPage extends BasePage {
         daysForPointExpiry.sendKeys(Keys.DELETE);
         saveDaysBtn.click();
     }
-
+    @Step
     public void checkDaysLimit()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -339,6 +364,7 @@ public class LoyaltyProgramPage extends BasePage {
         daysForPointExpiry.sendKeys("10");
         saveDaysBtn.click();
     }
+    @Step
     public void checkDaysLimitWithZero()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -347,6 +373,7 @@ public class LoyaltyProgramPage extends BasePage {
         daysForPointExpiry.sendKeys("0");
         saveDaysBtn.click();
     }
+    @Step
     public void checkDaysLimitWithNegative()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -355,6 +382,7 @@ public class LoyaltyProgramPage extends BasePage {
         daysForPointExpiry.sendKeys("-10");
         saveDaysBtn.click();
     }
+    @Step
     public void checkDaysLimitWithAlphabets()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -363,6 +391,7 @@ public class LoyaltyProgramPage extends BasePage {
         daysForPointExpiry.sendKeys("abc");
         saveDaysBtn.click();
     }
+    @Step
     public void checkDaysLimitWithSpecialCharacters()
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");
@@ -371,6 +400,7 @@ public class LoyaltyProgramPage extends BasePage {
         daysForPointExpiry.sendKeys("@#$");
         saveDaysBtn.click();
     }
+    @Step
     public void addDaysForPointExpiry(String days)
     {
         String selectAll = Keys.chord(Keys.CONTROL, "a");

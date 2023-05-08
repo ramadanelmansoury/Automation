@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,12 +38,12 @@ public class LoginPage extends BasePage {
 
         this.PasswordTxtBox.sendKeys(password);
     }
-
+    @Step
     public void pressLoginButton()
     {
         this.loginBtn.click();
     }
-
+    @Step
     public void fillLoginForm() throws InterruptedException {
         enterEmail(this.email);
         enterPassword(this.password);

@@ -15,9 +15,10 @@ public class RewardSystemPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@data-testid='programs']")
+    @FindBy( xpath ="//*[@data-testid='programs']")
     public WebElement loyaltyProgramBtnMenu;
-    @FindBy(css = "a[data-testid='loyaltyProgram']")
+
+    @FindBy( xpath ="//*[@data-testid='loyaltyProgram']")
     public WebElement RewardsButton;
 
     public void clickRewardsBtn() throws InterruptedException {

@@ -8,18 +8,6 @@ import java.time.Duration;
 public class BasePage {
         protected WebDriver driver;
 
-    
-
-    
-
- 
-
-
-
-    
-    
-    
-    
 
 
 
@@ -27,10 +15,17 @@ public class BasePage {
 
 
 
+
+
+
+
+
+   
         public BasePage(WebDriver driver){
             this.driver = driver;
             PageFactory.initElements(this.driver, this);
-            this.driver.manage().timeouts().implicitlyWait(Duration.ZERO.withSeconds(10));
+            this.driver.manage().timeouts().implicitlyWait(Duration.ZERO.withSeconds(20));
+
         }
         
         
