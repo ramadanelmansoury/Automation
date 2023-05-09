@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="methods" name="Failed suite [Surefire suite]" verbose="0">
-  <test thread-count="3" parallel="methods" name="Surefire test(failed)" verbose="0">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="TestSuite.LoyaltyProgramWaysTest">
+      <class name="com.bonat.base.testcases.LoyaltyProgramWaysTest">
         <methods>
-          <include name="ClickOnSaveButtonWithOutTikTokEmailAndPoints"/>
-          <include name="CompleteAnOrderActiveAndDeActive"/>
-          <include name="CompleteAnOrderMethod2"/>
-          <include name="CompleteِِAnOrderWithOutOption"/>
-          <include name="ClickOnSaveButtonRegisterInStore"/>
-          <include name="ClickOnSaveButtonWithoutTikTokUserName"/>
-          <include name="ClickOnSaveButtonTwitterFollowWithoutPoints"/>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="ActiveAndDeActiveTikTokFollowEarningMethods"/>
-          <include name="AddDaysWithAlphabets"/>
-          <include name="AddTikTokUserNameAndPoints"/>
-          <include name="tearDown"/>
-          <include name="AddDaysWithSpecialCharacters"/>
-          <include name="AddDaysWithMoreThan90"/>
-          <include name="ClickOnTwitterFollowEarningMethods"/>
-          <include name="AddDaysLessThan90"/>
-          <include name="inputPointsWithOption"/>
-          <include name="registerInStoreWithoutPoints"/>
-          <include name="AddDaysWithZero"/>
-          <include name="ClickOnSaveButtonWithoutTikTokPoints"/>
-          <include name="AddTwitterUserNameAndPoints"/>
+          <include name="LoyaltyProgram"/>
+          <include name="ActiveAndDeActiveRegisterInStoreEarningMethods"/>
           <include name="SaveWithInstagramEmailAndPoints"/>
           <include name="AddPointsInSignInStore"/>
-          <include name="ActiveAndDeActiveRegisterInStoreEarningMethods"/>
-          <include name="LoyaltyProgram"/>
-          <include name="ActiveAndDeActiveCelebrateABirthdayEarningMethods"/>
-          <include name="startBrowser"/>
-          <include name="AddPointsInTwitterFollow"/>
           <include name="ActiveAndDeActiveCelebrateABirthdayMethods"/>
           <include name="ClickOnSignInStoreEarningMethods"/>
-          <include name="CompleteAnOrderMethod"/>
-          <include name="ClickOnSaveButtonSignInStoreWithoutPoints"/>
-          <include name="ActiveAndDeActiveInstagramFollowEarningMethods"/>
+          <include name="AddPointsInTwitterFollow"/>
+          <include name="tearDown"/>
           <include name="ClickOnSaveButton"/>
-          <include name="ClickOnInstagramFollowEarningMethods"/>
-          <include name="SaveWithoutDays"/>
-          <include name="ClickOnSaveButtonCelebrateABirthday"/>
-          <include name="SaveWithoutInstagramEmail"/>
-          <include name="SaveWithoutInstagramPoints"/>
+          <include name="ActiveAndDeActiveInstagramFollowEarningMethods"/>
+          <include name="ClickOnSaveButtonSignInStoreWithoutPoints"/>
           <include name="ActiveAndDeActiveTwitterFollowEarningMethods"/>
-          <include name="AddDaysWithNegative"/>
-        </methods>
-      </class> <!-- TestSuite.LoyaltyProgramWaysTest -->
-      <class name="base.BaseTest">
-        <methods>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- base.BaseTest -->
-      <class name="TestSuite.RewardSystemTest">
-        <methods>
-          <include name="addPointAmountAndDiscountPercentageWithMaxLimit"/>
-          <include name="clickBackToRewardsButton"/>
-          <include name="addDiscountAmountOnly"/>
-          <include name="startBrowser"/>
-          <include name="clickRewardsButton"/>
           <include name="takeScreenShotOnFailure"/>
-          <include name="addExpiryPeriodOnly"/>
-          <include name="clickAddNewRewardButton"/>
-          <include name="addSpecificCategories"/>
+          <include name="CompleteAnOrderMethod"/>
+          <include name="SaveWithoutInstagramEmail"/>
+          <include name="ClickOnSaveButtonCelebrateABirthday"/>
+          <include name="SaveWithoutInstagramPoints"/>
+          <include name="ClickOnInstagramFollowEarningMethods"/>
+          <include name="AddDaysWithNegative"/>
+          <include name="SaveWithoutDays"/>
+          <include name="ActiveAndDeActiveCelebrateABirthdayEarningMethods"/>
+          <include name="ClickOnSaveButtonWithoutTikTokUserName"/>
+          <include name="CompleteAnOrderActiveAndDeActive"/>
+          <include name="CompleteِِAnOrderWithOutOption"/>
+          <include name="ClickOnSaveButtonWithOutTikTokEmailAndPoints"/>
+          <include name="CompleteAnOrderMethod2"/>
+          <include name="ClickOnSaveButtonRegisterInStore"/>
+          <include name="AddDaysWithAlphabets"/>
+          <include name="AddTikTokUserNameAndPoints"/>
+          <include name="ActiveAndDeActiveTikTokFollowEarningMethods"/>
+          <include name="ClickOnSaveButtonTwitterFollowWithoutPoints"/>
+          <include name="ClickOnSaveButtonWithoutTikTokPoints"/>
+          <include name="ClickOnTwitterFollowEarningMethods"/>
+          <include name="AddDaysWithMoreThan90"/>
+          <include name="AddDaysWithSpecialCharacters"/>
+          <include name="startBrowser"/>
+          <include name="inputPointsWithOption"/>
+          <include name="AddTwitterUserNameAndPoints"/>
+          <include name="registerInStoreWithoutPoints"/>
+          <include name="AddDaysWithZero"/>
+          <include name="AddDaysLessThan90"/>
+        </methods>
+      </class> <!-- com.bonat.base.testcases.LoyaltyProgramWaysTest -->
+      <class name="com.bonat.base.base.BaseTest">
+        <methods>
           <include name="tearDown"/>
-          <include name="addPointAmountOnly"/>
-          <include name="checkValidationMessage"/>
+        </methods>
+      </class> <!-- com.bonat.base.base.BaseTest -->
+      <class name="com.bonat.base.testcases.RewardSystemTest">
+        <methods>
+          <include name="clickAddNewRewardButton"/>
           <include name="addFreeShipping"/>
-          <include name="addPointAmountAndDiscountAmountThenSave"/>
+          <include name="addSpecificCategories"/>
+          <include name="checkValidationMessage"/>
           <include name="fillInRewardFormWithoutInputs"/>
           <include name="addFreeProduct"/>
+          <include name="tearDown"/>
+          <include name="addPointAmountAndDiscountPercentageWithMaxLimit"/>
           <include name="checkTabsClickAbility"/>
+          <include name="addDiscountAmountOnly"/>
+          <include name="addPointAmountAndDiscountAmountThenSave"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="clickBackToRewardsButton"/>
+          <include name="clickRewardsButton"/>
+          <include name="startBrowser"/>
+          <include name="addPointAmountOnly"/>
+          <include name="addExpiryPeriodOnly"/>
         </methods>
-      </class> <!-- TestSuite.RewardSystemTest -->
+      </class> <!-- com.bonat.base.testcases.RewardSystemTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

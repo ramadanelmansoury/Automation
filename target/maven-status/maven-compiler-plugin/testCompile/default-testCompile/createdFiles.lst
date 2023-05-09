@@ -1,8 +1,9 @@
-base\BasePage.class
-base\BaseTest.class
-TestSuite\RewardSystemTest.class
-TestSuite\LoyaltyProgramWaysTest.class
-pages\LoginPage.class
-pages\LoyaltyProgramPage.class
-pages\RewardSystemPage.class
-TestSuite\LoginTest.class
+com\bonat\base\pages\LoyaltyProgramPage.class
+com\bonat\base\base\BasePage.class
+com\bonat\base\base\BaseTest.class
+com\bonat\base\factory\DriverFactory.class
+com\bonat\base\testcases\RewardSystemTest.class
+com\bonat\base\pages\RewardSystemPage.class
+com\bonat\base\pages\LoginPage.class
+com\bonat\base\testcases\LoginTest.class
+com\bonat\base\testcases\LoyaltyProgramWaysTest.class
