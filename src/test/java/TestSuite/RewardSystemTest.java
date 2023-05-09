@@ -1,7 +1,9 @@
 package TestSuite;
+
 import base.BaseTest;
 import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
+import pages.LoginPage;
 import pages.RewardSystemPage;
 @Feature("Reward System Feature")
 public class RewardSystemTest extends BaseTest {
@@ -10,9 +12,12 @@ public class RewardSystemTest extends BaseTest {
     {
         super();
     }
+
     @Test (priority = 1)
     public void clickRewardsButton() throws InterruptedException
     {
+        LoginPage rewardLogin = new LoginPage(driver);
+        rewardLogin.fillLoginForm();
         Thread.sleep(1000);
         loyaltyProgramWays.clickRewardsBtn();
     }

@@ -13,13 +13,10 @@ import java.time.Duration;
 @Feature("Earning Methods Feature")
 public class LoyaltyProgramWaysTest extends BaseTest {
     LoyaltyProgramPage earning = new LoyaltyProgramPage(driver);
-
     public LoyaltyProgramWaysTest()
     {
-
         super();
     }
-
     @Test(priority = 1,description = "test descrpion ")
     @Story("Successful Login Then Navigate To Earning Methods Page")
     public void LoyaltyProgram() throws InterruptedException {

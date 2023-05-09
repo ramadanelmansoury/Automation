@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 @Feature("Login Feature")
 public class LoginTest extends BaseTest {
-
     public LoginTest()
     {
         super();
@@ -16,7 +15,6 @@ public class LoginTest extends BaseTest {
     @Test(description = "Login With A Valid Email And Password To Bonat ECOM")
 
     public static void submitForm() throws InterruptedException {
-
         LoginPage login = new LoginPage(driver);
         login.fillLoginForm();
     }
