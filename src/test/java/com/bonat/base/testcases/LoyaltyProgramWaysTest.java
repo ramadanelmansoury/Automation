@@ -1,13 +1,13 @@
-package TestSuite;
+package com.bonat.base.testcases;
 
-import base.BaseTest;
+import com.bonat.base.base.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.LoyaltyProgramPage;
+import com.bonat.base.pages.LoginPage;
+import com.bonat.base.pages.LoyaltyProgramPage;
 
 import java.time.Duration;
 @Feature("Earning Methods Feature")

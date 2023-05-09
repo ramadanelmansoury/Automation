@@ -1,10 +1,10 @@
-package TestSuite;
+package com.bonat.base.testcases;
 
-import base.BaseTest;
+import com.bonat.base.base.BaseTest;
 import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.RewardSystemPage;
+import com.bonat.base.pages.LoginPage;
+import com.bonat.base.pages.RewardSystemPage;
 @Feature("Reward System Feature")
 public class RewardSystemTest extends BaseTest {
     RewardSystemPage loyaltyProgramWays = new RewardSystemPage(driver);

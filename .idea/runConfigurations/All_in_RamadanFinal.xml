@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="All in RamadanFinal" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-    <module name="RamadanFinal" />
+    <module name="BonatEcom" />
     <option name="ALTERNATIVE_JRE_PATH" value="C:\Users\YAS\.jdks\corretto-1.8.0_372\jre" />
     <option name="PACKAGE_NAME" value="" />
     <option name="MAIN_CLASS_NAME" value="" />

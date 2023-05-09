@@ -1,10 +1,10 @@
-package TestSuite;
+package com.bonat.base.testcases;
 
-import base.BaseTest;
+import com.bonat.base.base.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import com.bonat.base.pages.LoginPage;
 @Feature("Login Feature")
 public class LoginTest extends BaseTest {
     public LoginTest()

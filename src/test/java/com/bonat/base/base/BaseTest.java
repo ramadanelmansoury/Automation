@@ -1,4 +1,4 @@
-package base;
+package com.bonat.base.base;
 
 import io.qameta.allure.Allure;
 import org.codehaus.plexus.util.FileUtils;
@@ -22,11 +22,6 @@ public class BaseTest {
 
     protected static WebDriver driver = new ChromeDriver();
 
-    public BaseTest()
-    {
-
-        BaseTest.driver = driver;
-    }
 
     @BeforeSuite
     public static void startBrowser() {

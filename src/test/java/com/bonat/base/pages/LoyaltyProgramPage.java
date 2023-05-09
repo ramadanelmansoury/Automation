@@ -1,6 +1,6 @@
-package pages;
+package com.bonat.base.pages;
 
-import base.BasePage;
+import com.bonat.base.base.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
