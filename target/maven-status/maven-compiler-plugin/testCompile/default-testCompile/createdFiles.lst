@@ -1,0 +1,8 @@
+base\BasePage.class
+base\BaseTest.class
+TestSuite\RewardSystemTest.class
+TestSuite\LoyaltyProgramWaysTest.class
+pages\LoginPage.class
+pages\LoyaltyProgramPage.class
+pages\RewardSystemPage.class
+TestSuite\LoginTest.class
